@@ -1,5 +1,4 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Button } from "@mui/material";
 import { useDrawerContext } from "../contexts/DrawerContext";
 import { useEffect } from "react";
 import { Dashboard } from "../pages/dashboard/Dashboard";
