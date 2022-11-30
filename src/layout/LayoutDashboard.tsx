@@ -4,17 +4,17 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Box,
 } from "@mui/material";
-import { Box } from "@mui/system";
 import { useDrawerContext } from "../contexts/DrawerContext";
 
-interface ILayoutBasePaginaProps {
+interface ILayoutDashboardProps {
   children: React.ReactNode;
   titulo: string;
   barraFerramentas?: React.ReactNode;
 }
 
-export const LayoutBasePagina: React.FC<ILayoutBasePaginaProps> = ({
+export const LayoutDashboard: React.FC<ILayoutDashboardProps> = ({
   children,
   titulo,
   barraFerramentas,
