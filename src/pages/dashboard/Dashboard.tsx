@@ -1,12 +1,14 @@
-import { LayoutBasePagina } from "../../layout/LayoutBasePagina";
+import { FerramentasDetalhe } from "../../components/ferramentasDetalhe/FerramentasDetalhe";
+import { FerramentasListagem } from "../../components/ferramentasListagem/FerramentasListagem";
+import { LayoutDashboard } from "../../layout/LayoutDashboard";
 
 export const Dashboard = () => {
   return (
-    <LayoutBasePagina
+    <LayoutDashboard
       titulo="Página Inicial"
-      barraFerramentas={<>Barra de ferramentas</>}
+      barraFerramentas={<FerramentasDetalhe />}
     >
       teste
-    </LayoutBasePagina>
+    </LayoutDashboard>
   );
 };
