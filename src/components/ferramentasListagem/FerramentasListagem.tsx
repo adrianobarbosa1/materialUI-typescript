@@ -9,6 +9,8 @@ import {
   useTheme,
 } from "@mui/material";
 
+import { Environment } from "../../environment/environment";
+
 interface IFerramentasListagem {
   textBusca?: string;
   mostrarInputBusca?: boolean;
@@ -44,7 +46,7 @@ export const FerramentasListagem: React.FC<IFerramentasListagem> = ({
           value={textBusca}
           onChange={(e) => mudarTextBusca?.(e.target.value)}
           size="small"
-          placeholder="Pesquisar..."
+          placeholder={Environment.INPUT_BUSCA}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
