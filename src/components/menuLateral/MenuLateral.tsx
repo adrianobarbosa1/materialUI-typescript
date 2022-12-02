@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import {
   Avatar,
   Divider,
@@ -16,7 +17,7 @@ import { useAppThemeContext } from "../../contexts/ThemeContext";
 import { ListItemLink } from "./ListItemLink";
 
 interface IMenuLateralProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {

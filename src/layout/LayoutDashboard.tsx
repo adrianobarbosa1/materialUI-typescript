@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import {
   Icon,
   IconButton,
@@ -9,7 +11,7 @@ import {
 import { useDrawerContext } from "../contexts/DrawerContext";
 
 interface ILayoutDashboardProps {
-  children: React.ReactNode;
+  children?: ReactNode;
   titulo: string;
   barraFerramentas?: React.ReactNode;
 }

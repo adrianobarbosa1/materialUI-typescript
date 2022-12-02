@@ -1,5 +1,6 @@
 import {
   createContext,
+  ReactNode,
   useCallback,
   useContext,
   useMemo,
@@ -20,7 +21,7 @@ export const useAppThemeContext = () => {
 };
 
 interface IAppThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({

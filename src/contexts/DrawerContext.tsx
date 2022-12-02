@@ -1,4 +1,10 @@
-import { createContext, useCallback, useContext, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useContext,
+  useState,
+} from "react";
 
 interface IDrawerContextData {
   isDrawerOpen: boolean;
@@ -13,7 +19,7 @@ export const useDrawerContext = () => {
 };
 
 interface IAppThemeProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 interface IDrawerOption {
