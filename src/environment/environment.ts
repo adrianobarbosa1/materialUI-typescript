@@ -2,7 +2,7 @@ export const Environment = {
   /**
   * Define a quantidade de linhas a ser carregada na por padrão nas listagens
   */
-  LIMITE_LINHA: 10,
+  LIMITE_LINHA: 7,
 
   /**
   * Placeholder exibido nos inputs
@@ -17,5 +17,5 @@ export const Environment = {
   /**
   * Url base de consultado dos dados dessa aplicação
   */
-  URL_BASE: "http://localhost:333"
+  URL_BASE: "http://localhost:3333"
 };

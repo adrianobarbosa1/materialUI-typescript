@@ -1,14 +1,14 @@
 import { Environment } from "../environment/environment";
 import { Api } from "./api";
 
-interface IListagemPessoa {
+export interface IListagemPessoa {
     id: number
     email: string
     cidadeId: number
     nomeCompleto: string
 }
 
-interface IDetalhePessoa {
+export interface IDetalhePessoa {
     id: number
     email: string
     cidadeId: number
@@ -22,7 +22,7 @@ type TPessoasComTotalCount = {
 
 const getAll = async (page = 1, filter = ""): Promise<TPessoasComTotalCount | Error> => {
   try {
-    const urlRelativa = `/pessoas?_page=${page}&_limit=${Environment.LIMITE_LINHA}&nomrCompleto_like=${filter}`;
+    const urlRelativa = `/pessoas?_page=${page}&_limit=${Environment.LIMITE_LINHA}&email_like=${filter}`;
     const {data, headers} = await Api.get(urlRelativa);
     if(data){
       return {
