@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
+  Icon,
+  IconButton,
   LinearProgress,
   Pagination,
   Paper,
@@ -11,7 +13,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useDebounce } from "../../hooks/UseDebounce";
 import { IListagemPessoa, PessoasService } from "../../services/PessoasService";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
@@ -21,6 +23,7 @@ import { Environment } from "../../environment/environment";
 export const ListagemPessoas: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { debounce } = useDebounce();
+  const navigate = useNavigate();
 
   const [rows, setRows] = useState<IListagemPessoa[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +56,22 @@ export const ListagemPessoas: React.FC = () => {
     });
   }, [busca, pagina]);
 
+  const handleDelete = (id: number) => {
+    if (confirm("Realmente deseja apagar?")) {
+      PessoasService.deleteById(id).then((result) => {
+        if (result instanceof Error) {
+          alert(result.message);
+        } else {
+          setRows((oldRows) => {
+            return [...oldRows.filter((oldRow) => oldRow.id !== id)];
+          });
+          alert("registro apagado com sucesso");
+          navigate("/pessoas");
+        }
+      });
+    }
+  };
+
   return (
     <LayoutDashboard
       titulo="Listagem de pessoas"
@@ -61,6 +80,7 @@ export const ListagemPessoas: React.FC = () => {
           mostrarInputBusca
           textBusca={busca}
           textButtonNovo="Nova"
+          cliqueButtonNovo={() => navigate("/pessoas/detalhe/nova")}
           mudarTextBusca={(texto) =>
             setSearchParams({ busca: texto, pagina: "1" }, { replace: true })
           }
@@ -83,7 +103,17 @@ export const ListagemPessoas: React.FC = () => {
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.id}>
-                <TableCell>Ações</TableCell>
+                <TableCell>
+                  <IconButton size="small" onClick={() => handleDelete(row.id)}>
+                    <Icon>delete</Icon>
+                  </IconButton>
+                  <IconButton
+                    size="small"
+                    onClick={() => navigate(`/pessoas/detalhe/${row.id}`)}
+                  >
+                    <Icon>edit</Icon>
+                  </IconButton>
+                </TableCell>
                 <TableCell>{row.nomeCompleto}</TableCell>
                 <TableCell>{row.email}</TableCell>
               </TableRow>
