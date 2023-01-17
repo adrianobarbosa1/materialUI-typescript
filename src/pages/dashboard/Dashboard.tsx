@@ -3,8 +3,7 @@ import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import { CidadesService } from "../../services/cidades/CidadesService";
 import { PessoasService } from "../../services/pessoas/PessoasService";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
-import { FerramentasListagem } from "../../components/ferramentasListagem/FerramentasListagem";
-
+import { FerramentasListagem } from "../../components";
 
 export const Dashboard = () => {
   const [isLoadingCidades, setIsLoadingCidades] = useState(true);

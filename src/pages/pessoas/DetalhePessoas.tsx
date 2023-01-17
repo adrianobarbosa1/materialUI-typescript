@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Box, Grid, LinearProgress, Paper, Typography } from "@mui/material";
 
-import { FerramentasDetalhe } from "../../components/ferramentasDetalhe/FerramentasDetalhe";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
 import { PessoasService } from "../../services/pessoas/PessoasService";
 import { UnForm, UnTextField, useUnForm } from "../../components/forms";
 import * as yup from "yup";
 import { IUnFormsErrors } from "../../components/forms/IUnFormsErrors";
 import { AutoCompleteCidade } from "./components/AutoCompleteCidades";
+import { FerramentasDetalhe } from "../../components";
 
 interface IFormData {
   nomeCompleto: string;

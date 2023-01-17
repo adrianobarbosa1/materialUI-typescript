@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import MUIDataTable from "mui-datatables";
 
-import { FerramentasListagem } from "../../components/ferramentasListagem/FerramentasListagem";
 import { IListagemPessoa, PessoasService } from "../../services/pessoas/PessoasService";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
 import { useDebounce } from "../../hooks/UseDebounce";
@@ -15,6 +14,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { Environment } from "../../environment/environment";
+import { FerramentasListagem } from "../../components";
 
 export const ListagemPessoas: React.FC = () => {
   const [searchParams, setSearchParamns] = useSearchParams();
