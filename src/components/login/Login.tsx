@@ -151,7 +151,6 @@ export const Login: React.FC<ILoginProps> = ({children}) => {
           <Button
             fullWidth
             variant="contained"
-            color="primary"
             disabled={isLoading}
             sx={{ mt: 3, mb: 2 }}
             onClick={handleSubmit}

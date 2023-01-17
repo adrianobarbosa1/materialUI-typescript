@@ -6,7 +6,7 @@ export const LightTheme = createTheme({
     mode: "light",
     primary: {
       main: blue[900],
-      dark: blue[900],
+      dark: "linear-gradient(195deg, rgb(73, 163, 241), rgb(15, 76, 129))",
       light: blue[600],
       contrastText: "#FFF",
     },
