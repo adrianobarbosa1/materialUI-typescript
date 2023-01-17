@@ -3014,6 +3014,11 @@ axe-core@^4.4.3:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.5.2.tgz#823fdf491ff717ac3c58a52631d4206930c1d9f7"
   integrity sha512-u2MVsXfew5HBvjsczCv+xlwdNnB1oQR9HlAcsejZttNjKKSkeDNVwB1vMThIUIFI9GoT57Vtk8iQLwqOfAkboA==
 
+axios-config@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/axios-config/-/axios-config-1.0.1.tgz#e66e2548e51ef2cf4c95bd195b0d35118705449a"
+  integrity sha512-i+tpHLg6jzOWoNeL9BnTAjiMWs3Nzy1oFw52gUzJtK9N/mnAXeZaqHoMuH0VI8FR3SJ3688lOmPj/j4I/t3luQ==
+
 axios@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.0.tgz#1cb65bd75162c70e9f8d118a905126c4a201d383"

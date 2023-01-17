@@ -122,5 +122,8 @@
       "nome": "brazlandia",
       "id": 12
     }
-  ]
+  ],
+  "auth": {
+    "accessToken": "aaaaaaaaaa.bbbbbbbbbb.cccccccc"
+  }
 }

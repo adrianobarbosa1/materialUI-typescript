@@ -4,10 +4,11 @@ import { Box, Grid, LinearProgress, Paper, Typography } from "@mui/material";
 
 import { FerramentasDetalhe } from "../../components/ferramentasDetalhe/FerramentasDetalhe";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
-import { PessoasService } from "../../services/PessoasService";
+import { PessoasService } from "../../services/pessoas/PessoasService";
 import { UnForm, UnTextField, useUnForm } from "../../components/forms";
 import * as yup from "yup";
 import { IUnFormsErrors } from "../../components/forms/IUnFormsErrors";
+import { AutoCompleteCidade } from "./components/AutoCompleteCidades";
 
 interface IFormData {
   nomeCompleto: string;
@@ -46,7 +47,7 @@ export const DetalhePessoas: React.FC = () => {
     } else {
       formRef.current?.setData({
         nomeCompleto: "",
-        cidadeId: " ",
+        cidadeId: undefined,
         email: "",
       });
     }
@@ -175,12 +176,7 @@ export const DetalhePessoas: React.FC = () => {
 
             <Grid container item direction="row" spacing={2}>
               <Grid item xs={12} sm={12} md={8}>
-                <UnTextField
-                  fullWidth
-                  name="cidadeId"
-                  disabled={isLoading}
-                  label="Cidade"
-                />
+                <AutoCompleteCidade isExternalLoading={isLoading} />
               </Grid>
             </Grid>
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Environment } from "../environment/environment";
+import { Environment } from "../../environment/environment";
 import { errorInterceptor } from "./ErrorInterceptor";
 import { responseInterceptor } from "./ResponseInterceptor";
 

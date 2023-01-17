@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useDebounce } from "../../hooks/UseDebounce";
-import { IListagemPessoa, PessoasService } from "../../services/PessoasService";
+import { IListagemPessoa, PessoasService } from "../../services/pessoas/PessoasService";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
 import { FerramentasListagem } from "../../components/ferramentasListagem/FerramentasListagem";
 import { Environment } from "../../environment/environment";

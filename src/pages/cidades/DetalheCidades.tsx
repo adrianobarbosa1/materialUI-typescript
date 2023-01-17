@@ -4,7 +4,7 @@ import { Box, Grid, LinearProgress, Paper, Typography } from "@mui/material";
 
 import { FerramentasDetalhe } from "../../components/ferramentasDetalhe/FerramentasDetalhe";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
-import { CidadesService } from "../../services/CidadesService";
+import { CidadesService } from "../../services/cidades/CidadesService";
 import { UnForm, UnTextField, useUnForm } from "../../components/forms";
 import * as yup from "yup";
 import { IUnFormsErrors } from "../../components/forms/IUnFormsErrors";

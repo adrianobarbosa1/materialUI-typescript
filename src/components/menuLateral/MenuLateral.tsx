@@ -15,6 +15,7 @@ import {
 import { useDrawerContext } from "../../contexts/DrawerContext";
 import { useAppThemeContext } from "../../contexts/ThemeContext";
 import { ListItemLink } from "./ListItemLink";
+import { useAuthContext } from "../../contexts";
 
 interface IMenuLateralProps {
   children: ReactNode;
@@ -26,6 +27,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
   const { toggleTheme } = useAppThemeContext();
+  const { logout } = useAuthContext();
 
   return (
     <>
@@ -77,6 +79,12 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                   <Icon>dark_mode</Icon>
                 </ListItemIcon>
                 <ListItemText primary="Alternar tema" />
+              </ListItemButton>
+              <ListItemButton onClick={logout}>
+                <ListItemIcon>
+                  <Icon>logout</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Sair" />
               </ListItemButton>
             </List>
           </Box>

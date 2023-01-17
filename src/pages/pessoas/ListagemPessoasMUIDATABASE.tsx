@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import MUIDataTable from "mui-datatables";
 
 import { FerramentasListagem } from "../../components/ferramentasListagem/FerramentasListagem";
-import { IListagemPessoa, PessoasService } from "../../services/PessoasService";
+import { IListagemPessoa, PessoasService } from "../../services/pessoas/PessoasService";
 import { LayoutDashboard } from "../../layout/LayoutDashboard";
 import { useDebounce } from "../../hooks/UseDebounce";
 import {
