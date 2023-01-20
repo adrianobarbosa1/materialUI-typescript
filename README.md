@@ -1,1 +1,1 @@
-# Dashboard 2
+# Dashboard
